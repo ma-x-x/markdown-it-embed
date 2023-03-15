@@ -214,7 +214,7 @@ function tokenizeImagesAndMedia(state, silent, md, sustainExtensions, fileExt) {
   content = state.src.slice(labelStart, labelEnd);
 
   state.md.inline.parse(content, state.md, state.env, (tokens = []));
-  const extensionMatch = url.match(/\.([^/.]+)$/);
+  const extensionMatch = href.match(/\.([^/.]+)$/);
   if (extensionMatch === null) return "image";
   const extension = extensionMatch[1];
   fileExt.url = href;
