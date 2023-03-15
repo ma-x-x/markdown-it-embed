@@ -1,7 +1,6 @@
 "use strict";
 /* eslint complexity: "off" */
 const suffixes = require("./suffixes.json");
-const subtypeMap = require("./subtypeMap.json");
 
 /**
  * A minimalist `markdown-it` plugin for parsing video/audio references inside
@@ -15,7 +14,7 @@ const subtypeMap = require("./subtypeMap.json");
 // extensions (MPG, MP4)
 const validAudioExtensions = ["aac", "m4a", "mp3", "oga", "ogg", "wav"];
 const validVideoExtensions = ["mp4", "m4v", "ogv", "webm", "mpg", "mpeg"];
-const embedExtensions = suffixes;
+const embedExtensions = Object.keys(suffixes);
 
 /**
  * @property {Object} messages
