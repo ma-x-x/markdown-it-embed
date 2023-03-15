@@ -1,1 +1,1 @@
-# markdown-it-embed-pdf
+# markdown-it-embed
